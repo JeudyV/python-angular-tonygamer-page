@@ -12,6 +12,7 @@ export class DplayerService {
   conver2:any = ' ';
   WZ:any = ' ';
   BR:any = ' ';
+  platfor:string = ' ';
 
   constructor( private http: HttpClient ) { }
 
@@ -20,7 +21,8 @@ export class DplayerService {
   } 
   getSearchPlayer( text:string ){
 
-    // return this.http.get(`${ this.baseUrl }/search/player/${ text }`)
+    // return this.http.get(`${ this.baseUrl }/search/player/${ text }/platfor/${this.platfor}`)
+    return this.http.get(`${ this.baseUrl }/search/${ text }/${this.platfor}`)
 
   }
 }

@@ -14,6 +14,13 @@ export class NavbarComponent implements OnInit {
   notFound = false;
   conver:any;
 
+  selectedplatfor: string = ' ';
+
+  SCH(event:any){
+    this.selectedplatfor = event.target.value;
+    this.dplayer.platfor = this.selectedplatfor;
+  }
+
   toggleClass() {
     this.classApplied = !this.classApplied;
   }
@@ -30,6 +37,8 @@ export class NavbarComponent implements OnInit {
     // this.activatedRoute.params.subscribe( params => {
     //   console.log("params",params);
     // })
+
+    
 
   }
 
@@ -54,16 +63,14 @@ export class NavbarComponent implements OnInit {
         //llamar al servicio
       })
       this.dplayer.getDplayer().subscribe(resp => {
-    //  console.log(resp);
-        // this.conver=resp
-        this.dplayer.conver2 = resp
-        console.log(this.dplayer.conver2[0])  
+        this.dplayer.conver2 = resp 
         this.dplayer.WZ = this.dplayer.conver2[0].warzone
         this.dplayer.BR = this.dplayer.conver2[0].battle
-        console.log(this.dplayer.WZ)
-        console.log(this.dplayer.BR)
       })
       this.router.navigate(['/profile', text]);
+      this.dplayer.getSearchPlayer(text).subscribe( resp => {
+        console.log("paramssssssssssssssssss",resp);
+      } )
       this.toggleClass()
     }
   }

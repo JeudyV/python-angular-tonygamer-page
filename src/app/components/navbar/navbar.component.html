@@ -15,7 +15,7 @@
     <div class="md-c">
         <h2>FIND PLAYERS</h2>
         <div>
-            <div class="table_center">
+            <!-- <div class="table_center">
                 <div [class.drop-down--active]="dropActive" class="drop-down">
                     <div id="dropDown" (click)="DropDowmMenu()" class="drop-down__button">
                         <span class="drop-down__name">Platform</span>
@@ -25,7 +25,7 @@
 
                     <div class="drop-down__menu-box">
                         <ul class="drop-down__menu">
-                            <li data-name="profile" class="drop-down__item">PlayStation Network
+                            <li id="demoo" data-name="profile" class="drop-down__item" (click)="toggleClass2()">PlayStation Network
                                 <div class="drop-down__item-icon"></div>
                             </li>
                             <li data-name="dashboard" class="drop-down__item">Activision ID
@@ -40,7 +40,14 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <select (change)="SCH($event)" id="opciones" name="opciones">
+                <option value="" selected>seleccione la marca</option>
+                <option value="1" >PlayStation Network</option>
+                <option value="2">Activision ID</option>
+                <option value="3">Battle.net</option>
+                <option value="4">Xbox Live</option>
+            </select>
             <div class="go-bottom">
                 <div class="search">
                     <input #txtBuscar (keyup.enter)="findprofile( txtBuscar.value )" id="name" name="name" type="text" required type="search">
