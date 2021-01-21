@@ -1,0 +1,373 @@
+    @import "src/app/shared/mixins";
+    @import "src/app/shared/color";
+    * {
+        box-sizing: border-box;
+    }
+    
+    .tap-gamer {
+        @include dimen (100%, 50px);
+        display: flex;
+        align-items: center;
+        padding-left: 140px;
+        >p {
+            color: $ctitle;
+            font-size: 24px;
+        }
+    }
+    
+    nav {
+        @include dimen(100%, 60px);
+        position: fixed;
+        top: 50px;
+        z-index: 1000;
+        transition: 0.7s;
+        background-color: $colorHeader;
+        color: $cheader-title;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        -webkit-box-shadow: -1px 6px 15px -2px rgba(0, 0, 0, 0.8);
+        box-shadow: -1px 6px 15px -2px rgba(0, 0, 0, 0.8);
+        .nav-left {
+            @include dimen(55px, 55px);
+            position: relative;
+            // top: -30px;
+            left: 120px;
+            border-radius: 10%;
+            display: flex;
+            align-items: center;
+            background-color: azure;
+            background: url(../../../assets/TGAMES_LOGO.png);
+            background-size: cover;
+            >li {
+                padding-left: 30px;
+                a {
+                    color: $ctitle;
+                }
+            }
+        }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            >li {
+                padding-right: 30px;
+                a {
+                    color: $ctitle;
+                }
+            }
+        }
+    }
+    
+    .header_change {
+        background-color: brown;
+        position: fixed;
+        top: 0;
+    }
+    
+    .md-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 50%;
+        z-index: 2000;
+        padding: 10px;
+        visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        .md-c {
+            @include dimen(100%, 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            >h2 {
+                margin-top: 25px;
+                margin-bottom: 25px;
+                color: cadetblue;
+                // font-size: 12px;
+                text-transform: uppercase;
+                // color: gray;
+                font-weight: 800;
+                letter-spacing: 2px;
+            }
+            >div {
+                margin-top: 15px;
+                @include dimen(100%, 70px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .table_center {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                .drop-down {
+                    display: inline-block;
+                    position: relative;
+                }
+                .drop-down__button {
+                    // background: linear-gradient(to right, #3d6def, #8FADFE);
+                    display: inline-block;
+                    line-height: 36px;
+                    padding: 0 18px;
+                    text-align: left;
+                    border-radius: 10px;
+                    border: 2px solid gray;
+                    margin-right: 12px;
+                    // box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
+                    cursor: pointer;
+                }
+                .drop-down__name {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: gray;
+                    font-weight: 800;
+                    letter-spacing: 2px;
+                }
+                .drop-down__icon {
+                    width: 18px;
+                    vertical-align: middle;
+                    margin-left: 14px;
+                    height: 18px;
+                    border-radius: 50%;
+                    transition: all 0.4s;
+                    -webkit-transition: all 0.4s;
+                    -moz-transition: all 0.4s;
+                    -ms-transition: all 0.4s;
+                    -o-transition: all 0.4s;
+                }
+                .drop-down__menu-box {
+                    position: absolute;
+                    width: 150%;
+                    left: 0;
+                    background-color: #fff;
+                    border-radius: 4px;
+                    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+                    transition: all 0.3s;
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -ms-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    visibility: hidden;
+                    opacity: 0;
+                    margin-top: 5px;
+                }
+                .drop-down__menu {
+                    margin: 0;
+                    padding: 0 13px;
+                    list-style: none;
+                }
+                .drop-down__menu-box:before {
+                    content: '';
+                    background-color: transparent;
+                    border-right: 8px solid transparent;
+                    position: absolute;
+                    border-left: 8px solid transparent;
+                    border-bottom: 8px solid #fff;
+                    border-top: 8px solid transparent;
+                    top: -15px;
+                    right: 18px;
+                }
+                .drop-down__menu-box:after {
+                    content: '';
+                    background-color: transparent;
+                }
+                .drop-down__item {
+                    font-size: 13px;
+                    padding: 13px 0;
+                    text-align: left;
+                    font-weight: 500;
+                    color: #909dc2;
+                    cursor: pointer;
+                    position: relative;
+                    border-bottom: 1px solid #e0e2e9;
+                }
+                .drop-down__item-icon {
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    right: 0px;
+                    fill: #8995b6;
+                }
+                .drop-down__item:hover .drop-down__item-icon {
+                    fill: #F4D03F;
+                }
+                .drop-down__item:hover {
+                    color: #F4D03F;
+                }
+                .drop-down__item:last-of-type {
+                    border-bottom: 0;
+                }
+                .drop-down--active .drop-down__menu-box {
+                    visibility: visible;
+                    opacity: 1;
+                    margin-top: 15px;
+                }
+                .drop-down__item:before {
+                    content: '';
+                    position: absolute;
+                    width: 3px;
+                    height: 28px;
+                    background-color: #F4D03F;
+                    left: -13px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: none;
+                }
+                .drop-down__item:hover:before {
+                    display: block;
+                }
+                .go-bottom {
+                    width: 70%;
+                    >div {
+                        position: relative;
+                        overflow: hidden;
+                        input {
+                            width: 100%;
+                            height: 60px;
+                            border: 2px solid gray;
+                            background: none;
+                            position: relative;
+                            top: 0;
+                            left: 0;
+                            z-index: 1;
+                            padding: 8px 12px;
+                            outline: 0;
+                            border-radius: 10px;
+                            &:valid {
+                                // Hides the label
+                                background: white;
+                            }
+                            &:focus {
+                                border-color: #F4D03F;
+                            }
+                            &:focus+label {
+                                background: #F4D03F;
+                                color: white;
+                                font-size: 70%;
+                                padding: 1px 6px;
+                                z-index: 2;
+                                text-transform: uppercase;
+                            }
+                        }
+                        label {
+                            transition: // not padding
+                            background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+                            position: absolute;
+                            color: #999;
+                            padding: 15px 16px;
+                            font-size: 12px;
+                            text-transform: uppercase;
+                            color: gray;
+                            font-weight: 800;
+                            letter-spacing: 2px;
+                        }
+                    }
+                }
+                .go-bottom {
+                    input {
+                        padding: 12px 12px 12px 12px;
+                    }
+                    label {
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        border-radius: 10px;
+                        font-size: 24px;
+                    }
+                    input:focus {
+                        padding: 4px 6px 20px 6px;
+                        font-size: 24px;
+                    }
+                    input:focus+label {
+                        top: 100%;
+                        margin-top: -16px;
+                    }
+                }
+            }
+            .action-search {
+                margin-top: 15px;
+                @include dimen(100%, 70px);
+                .search-player {
+                    @include dimen(48%, 30px);
+                    margin-right: 3%;
+                    background-color: transparent;
+                    border: 2px solid gray;
+                    color: gray;
+                    border-radius: 10px;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: gray;
+                    font-weight: 800;
+                    letter-spacing: 2px;
+                }
+                .md-close {
+                    @include dimen(28%, 30px);
+                    margin-left: 3%;
+                    background-color: gray;
+                    border-radius: 10px;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: $colorBody;
+                    font-weight: 800;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+    
+    .md-show {
+        visibility: visible;
+    }
+    
+    .md-overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        opacity: 0;
+        background: rgba(#e4f0e3, 0.8);
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .md-show~.md-overlay {
+        opacity: 0.96;
+        visibility: visible;
+    }
+    
+    .md-effect-12 .md-content {
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+        opacity: 0;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .md-show.md-effect-12~.md-overlay {
+        background-color: $colorBody;
+    }
+    
+    .md-effect-12 .md-content h3,
+    .md-effect-12 .md-content {
+        background: transparent;
+    }
+    
+    .md-show.md-effect-12 .md-content {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }

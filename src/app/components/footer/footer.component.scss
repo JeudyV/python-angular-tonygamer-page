@@ -1,0 +1,47 @@
+@import "src/app/shared/mixins";
+@import "src/app/shared/color";
+footer {
+    @include dimen(100%, 150px);
+    background-color: $colorHeader;
+    .footert {
+        @include dimen(100%, 70%);
+        display: flex;
+        justify-content: center;
+        .footert-content {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 50px;
+            >p {
+                color: #fff;
+                >a {
+                    color: #fff;
+                }
+            }
+            >ul {
+                display: flex;
+                >li {
+                    margin-right: 20px;
+                    >a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .footerb {
+        @include dimen(100%, 30%);
+        display: flex;
+        justify-content: center;
+        .footerb-content {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            p {
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+    }
+}

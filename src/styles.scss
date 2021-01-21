@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import "src/app/shared/reset";
+@import "src/app/shared/color";
+@import "src/app/shared/mixins";
+body {
+    background-color: $colorBody;
+}

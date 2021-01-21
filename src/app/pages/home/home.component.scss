@@ -1,0 +1,283 @@
+@import "src/app/shared/mixins";
+@import "src/app/shared/color";
+header {
+    @include dimen (100%, 50vh);
+    background-image: url(../../../assets/Warzone.jpg);
+    background-size: cover;
+    // margin-top: 60px;
+    >h2 {
+        position: absolute;
+        top: 23vh;
+        left: 26%;
+        color: #fff;
+        font-size: 40px;
+    }
+    .header-search {
+        @include dimen(33%, 100px);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 30vh;
+        left: 20%;
+        .dropdown {
+            width: 130px;
+            height: 60px;
+            position: relative;
+            .a {
+                width: 100%;
+                height: 60px;
+                border-radius: 2px;
+                box-shadow: 0 6px 5px -5px rgba(0, 0, 0, 0.3);
+                line-height: 60px;
+                &::after {
+                    content: "";
+                    float: right;
+                    margin: 26px 15px 0 0;
+                    width: 0;
+                    height: 0;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-top: 10px solid #CCC;
+                }
+            }
+            ul {
+                list-style-type: none;
+                display: block;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                width: 100%;
+                box-shadow: 0 6px 5px -5px rgba(0, 0, 0, 0.3);
+                overflow: hidden;
+                li {
+                    height: 0;
+                    overflow: hidden;
+                    transition: all 500ms;
+                    &:first-child {
+                        a {
+                            border-radius: 2px 2px 0 0;
+                            &::before {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                width: 0;
+                                height: 0;
+                                border-left: 10px solid transparent;
+                                border-right: 10px solid transparent;
+                                border-bottom: 10px solid #FFF;
+                                margin: -10px 0 0 30px;
+                            }
+                            &:hover {
+                                &::before {
+                                    border-bottom-color: #EEE;
+                                }
+                            }
+                        }
+                    }
+                    &:last-child {
+                        a {
+                            border-radius: 0 0 2px 2px;
+                        }
+                    }
+                }
+            }
+            a {
+                display: block;
+                padding: 0 0 0 10px;
+                text-decoration: none;
+                line-height: 40px;
+                font-size: 13px;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #999;
+                background-color: #FFF;
+                &:hover {
+                    background-color: #EEE;
+                    color: #666;
+                    &::after {
+                        border-top-color: #AAA;
+                    }
+                }
+            }
+        }
+        .dropdown.hover {
+            li {
+                transition-delay: 300ms;
+            }
+            &:hover {
+                li {
+                    height: 40px;
+                    &:first-child {
+                        padding-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .name {
+        width: 70%;
+        height: 62px;
+        margin-left: 5px;
+    }
+}
+
+.best-player {
+    @include dimen(100%, 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #264653;
+    p {
+        color: #AAA;
+        font-size: xx-large;
+    }
+}
+
+.wrapper {
+    @include dimen(100%, auto);
+    .best-rank {
+        @include dimen(auto, auto);
+        background: linear-gradient(to bottom, rgba(140, 122, 122, 1) 0%, rgba(175, 135, 124, 1) 65%, rgba(175, 135, 124, 1) 100%) fixed;
+        background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/coc-background.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #9E9E9E;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        >p {
+            color: #fff
+        }
+        .wrapper-best {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .wins {
+                @include dimen(250px,
+                400px);
+                @include difu();
+                background-color: $cbody-carts;
+                margin-top: 60px;
+                margin-right: 15px;
+                border-radius: 5px;
+                .header-cart-score {
+                    @include mheader-cart-score('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg');
+                }
+                .content-cart-score {
+                    @include mcontent-cart-score();
+                }
+                .footer-cart-score {
+                    @include mfooter-cart-score();
+                    .btn-link-cart {
+                        @include mbtn-link-cart;
+                    }
+                }
+            }
+            .kills {
+                @include dimen(280px,
+                430px);
+                @include difu();
+                background-color: $cbody-carts;
+                margin-top: 60px;
+                border-radius: 5px;
+                .header-cart-score {
+                    @include mheader-cart-score('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg');
+                }
+                .content-cart-score {
+                    @include mcontent-cart-score();
+                }
+                .footer-cart-score {
+                    @include mfooter-cart-score();
+                    .btn-link-cart {
+                        @include mbtn-link-cart;
+                    }
+                }
+            }
+            .score {
+                @include dimen(250px,
+                400px);
+                @include difu();
+                background-color: $cbody-carts;
+                margin-top: 60px;
+                margin-left: 15px;
+                border-radius: 5px;
+                .header-cart-score {
+                    @include mheader-cart-score('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg');
+                }
+                .content-cart-score {
+                    @include mcontent-cart-score();
+                }
+                .footer-cart-score {
+                    @include mfooter-cart-score();
+                    .btn-link-cart {
+                        @include mbtn-link-cart;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about {
+    @include dimen(100%,
+    150px);
+    background-color: $colorHeader;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        color: #fff;
+    }
+    p {
+        width: 60%;
+        color: $ctitle;
+    }
+}
+
+.social {
+    @include dimen(100%,
+    150px);
+    background-color: #3A4959;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .info-social {
+        width: 30%;
+        margin-right: 130px;
+        color: #fff;
+    }
+    .btn-socials {
+        >ul {
+            display: flex;
+            >li {
+                border-radius: 15px;
+                margin-right: 10px;
+                >a {
+                    width: 200px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #EEE;
+                    font-size: 24px;
+                    cursor: pointer;
+                }
+            }
+            >li:nth-child(1) {
+                background-color: #3b5998;
+            }
+            >li:nth-child(2) {
+                background-color: #C74274;
+            }
+            >li:nth-child(3) {
+                background-color: #64469f;
+            }
+            >li:nth-child(4) {
+                background-color: #69C9D0;
+            }
+        }
+    }
+}

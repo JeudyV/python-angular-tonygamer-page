@@ -1,0 +1,58 @@
+<div class="tap-gamer">
+    <p>WARZONE</p>
+</div>
+<nav [class.header_change]="header_variable">
+    <ul class="nav-left">
+    </ul>
+    <ul class="nav-right">
+        <li><a routerLink="/home">Home</a></li>
+        <!-- <li><a routerLink="/profile">Profile</a></li> -->
+        <li><a class="button" (click)="toggleClass()">Search Profile</a></li>
+    </ul>
+</nav>
+
+<div [class.md-show]="classApplied" class="md-modal md-effect-12">
+    <div class="md-c">
+        <h2>FIND PLAYERS</h2>
+        <div>
+            <div class="table_center">
+                <div [class.drop-down--active]="dropActive" class="drop-down">
+                    <div id="dropDown" (click)="DropDowmMenu()" class="drop-down__button">
+                        <span class="drop-down__name">Platform</span>
+                        <div class="drop-down__icon">
+                        </div>
+                    </div>
+
+                    <div class="drop-down__menu-box">
+                        <ul class="drop-down__menu">
+                            <li data-name="profile" class="drop-down__item">PlayStation Network
+                                <div class="drop-down__item-icon"></div>
+                            </li>
+                            <li data-name="dashboard" class="drop-down__item">Activision ID
+                                <div class="drop-down__item-icon"></div>
+                            </li>
+                            <li data-name="activity" class="drop-down__item">Battle.net
+                                <div class="drop-down__item-icon"></div>
+                            </li>
+                            <li data-name="activity" class="drop-down__item">Xbox Live
+                                <div class="drop-down__item-icon"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="go-bottom">
+                <div class="search">
+                    <input #txtBuscar (keyup.enter)="findprofile( txtBuscar.value )" id="name" name="name" type="text" required type="search">
+                    <label for="name">Player</label>
+                </div>
+            </div>
+        </div>
+        <div class="action-search">
+            <button (click)="findprofile( txtBuscar.value )" class="search-player">let's go</button>
+            <button class="md-close" (click)="toggleClass()">close</button>
+        </div>
+    </div>
+</div>
+
+<div class="md-overlay"></div>

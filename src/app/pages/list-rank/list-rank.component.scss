@@ -1,0 +1,157 @@
+@import "src/app/shared/mixins";
+@import "src/app/shared/color";
+.main-content {
+    @include dimen(65%, 100%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 100px;
+    .main-header {
+        @include dimen(75%, 100%);
+        .main-menu {
+            @include dimen(100%, 70px);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            background-color: $cmain-menu;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .main-item {
+                padding-left: 40px;
+                a {
+                    color: #fff;
+                }
+            }
+        }
+        .menu {
+            @include dimen(100%, 100px);
+            background-color: $cmenu;
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+            .menu-nav {
+                display: flex;
+                margin-left: 20px;
+                padding: 10px;
+                border-radius: 5px;
+                background-color: darkmagenta;
+                .manu-item {
+                    padding-right: 20px;
+                }
+            }
+            // crear un mixin para los models 
+            .trigger {
+                @include btn-trigger
+            }
+            .modal {
+                @include modal-content;
+            }
+        }
+        .main-header-title {
+            @include dimen(100%, 150px);
+            background-color: $cheader-title;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2 {
+                font-size: 20px;
+                color: #fff;
+                margin-bottom: 20px;
+                margin-left: 20px;
+                span {
+                    font-size: 24px;
+                    padding-right: 10px;
+                }
+            }
+            .fa-check-circle {
+                margin-right: 10px;
+                font-size: 24px;
+                color: #51C256;
+            }
+            .message {
+                @include dimen(95%, none);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 2.5%;
+                margin-right: 2.5%;
+                padding: 10px;
+                border-radius: 5px;
+                background-color: #365946;
+            }
+            p {
+                color: #E6E8E7;
+            }
+        }
+        .podium-ranket {
+            @include dimen(100%, auto);
+            background-color: #2D3640;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            table {
+                width: 100%;
+                color: #fff;
+                thead {
+                    background-color: #3B4754;
+                    margin-bottom: 20px;
+                    tr {
+                        th:nth-child(1) {
+                            @include tr_th(100px, left, 15px);
+                        }
+                        th:nth-child(2) {
+                            @include tr_th(none, left, 25px);
+                        }
+                        th:nth-child(3) {
+                            @include tr_th(300px, start, 15px);
+                        }
+                        th:nth-child(4) {
+                            @include tr_th(80px, left, 25px);
+                        }
+                        th:nth-child(5) {
+                            @include tr_th(150px, left, 25px);
+                            height: 30px;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            padding-top: 10px;
+                            padding-bottom: 20px;
+                        }
+                        td:nth-child(1) {
+                            @include tr_td(25px, 0, none);
+                        }
+                        td:nth-child(2) {
+                            @include tr_td(25px, 0, none);
+                        }
+                        td:nth-child(3) {
+                            @include tr_td(25px, 0, start);
+                        }
+                        td:nth-child(4) {
+                            @include tr_td(0, 25px, right);
+                        }
+                        td:nth-child(5) {
+                            @include tr_td(0, 25px, right);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main-regional {
+        @include dimen(23%, 200px);
+        display: flex;
+        flex-direction: column;
+        background-color: $cheader-title;
+        .trigger {
+            @include btn-trigger
+        }
+        .modal {
+            @include modal-content;
+        }
+    }
+}

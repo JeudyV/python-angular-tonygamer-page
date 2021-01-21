@@ -1,0 +1,612 @@
+@import "src/app/shared/mixins";
+@import "src/app/shared/color";
+header {
+    width: 100%;
+    height: 50vh;
+    .header-wrapper {
+        width: 100%;
+        height: 44vh;
+        .header-img {
+            width: 100%;
+            height: 44vh;
+            background-image: url(../../../assets/Warzone.jpg);
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            .icon-perfil {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: brown;
+                margin-left: 15%;
+                margin-bottom: -40px;
+                z-index: 20px;
+            }
+            .perfil-content {
+                width: 65%;
+                height: 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                ul {
+                    list-style: none;
+                    display: flex;
+                    padding-left: 20px;
+                    padding-bottom: 10px;
+                    li {
+                        padding-right: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &:nth-child(1) {
+                            color: #fff;
+                            font-size: 28px;
+                            span {
+                                color: #fff;
+                                font-size: 36px;
+                                margin-left: 10px;
+                            }
+                        }
+                        &:nth-child(3) {
+                            color: #fff;
+                            font-size: 24px;
+                            span {
+                                font-size: 26px;
+                                margin-right: 10px;
+                            }
+                        }
+                        &:nth-child(2) {
+                            color: #fff;
+                            font-size: 24px;
+                        }
+                    }
+                }
+                .icon-twitch {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color: #6440A5;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    margin-right: 20px;
+                    .fa-twitch {
+                        font-size: 32px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .nav-main {
+        width: 100%;
+        height: 60px;
+        background-color: #475666;
+        display: flex;
+        justify-content: center;
+        ul {
+            width: 70%;
+            height: 60px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 100px;
+        }
+    }
+    nav {
+        ul {
+            li {
+                list-style: none;
+                padding-left: 40px;
+                a {
+                    text-decoration: none;
+                    color: $ctitle;
+                }
+            }
+        }
+    }
+}
+
+.content-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #1E242B;
+    display: flex;
+    justify-content: center;
+    .sections-statistics {
+        width: 70%;
+        height: 100%;
+        .content-section {
+            width: 100%;
+            height: auto;
+            background-color: #2D3640;
+            margin-bottom: 50px;
+            border-radius: 10px;
+            .title-header {
+                width: 100%;
+                height: 60px;
+                border-bottom: 1px solid #566573;
+                ul {
+                    width: auto;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    li {
+                        list-style: none;
+                        padding-left: 50px;
+                        color: #fff;
+                    }
+                }
+            }
+            .title-level {
+                width: 100%;
+                height: 120px;
+                display: flex;
+                background-color: #1A2E4D;
+                .icon {
+                    width: 100px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: aliceblue;
+                }
+                .lvl {
+                    width: 200px;
+                    height: auto;
+                    color: #fff;
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: center;
+                }
+            }
+            .content {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                .stats {
+                    width: 150px;
+                    height: 80px;
+                    padding-left: 20px;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: center;
+                    transition: 0.5s;
+                    &:hover {
+                        border-radius: 10px;
+                        background-color: #1A2E4D;
+                    }
+                    .title {
+                        font-size: 18px;
+                        font-weight: bold;
+                        font-family: 'Oswald', sans-serif;
+                        color: #B2C2D4;
+                    }
+                    .score {
+                        font-size: 20px;
+                        font-weight: bold;
+                        font-family: 'Oswald', sans-serif;
+                        color: #fff;
+                    }
+                    .bottom {
+                        font-size: 10px;
+                        color: #F4D03F;
+                    }
+                }
+            }
+            .content-days {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                background-color: #3B4754;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                .title {
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    p {
+                        font-size: 18px;
+                        font-weight: bold;
+                        font-family: 'Oswald', sans-serif;
+                        color: #fff;
+                        margin-left: 10px;
+                    }
+                }
+                .c-d {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .stats {
+                        width: 150px;
+                        height: 60px;
+                        padding-left: 10px;
+                        margin-left: 20px;
+                        margin-right: 20px;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: center;
+                        .t {
+                            font-size: 18px;
+                            font-weight: bold;
+                            font-family: 'Oswald', sans-serif;
+                            color: #B2C2D4;
+                        }
+                        .s {
+                            font-size: 20px;
+                            font-weight: bold;
+                            font-family: 'Oswald', sans-serif;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        .content-ability {
+            width: 100%;
+            height: 50vh;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            .weapons {
+                width: 49%;
+                height: 100%;
+                border-radius: 10px;
+                .weapons-header {
+                    width: 100%;
+                    height: 40%;
+                    .weapons-header-top {
+                        width: 100%;
+                        height: 50%;
+                        background-color: #000;
+                        display: flex;
+                        justify-content: space-between;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                        .top-title {
+                            width: 33%;
+                            height: 100%;
+                            p {
+                                padding-top: 10px;
+                                padding-left: 20px;
+                                font-family: 'Titillium Web', sans-serif;
+                                font-size: 18px;
+                                color: #fff;
+                            }
+                        }
+                        .top-kills {
+                            width: 33%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            padding-bottom: 10px;
+                            padding-left: 10px;
+                            p {
+                                font-size: 16px;
+                                font-weight: bold;
+                                font-family: 'Oswald', sans-serif;
+                                color: #B2C2D4;
+                                span {
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    font-family: 'Oswald', sans-serif;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        .top-KD {
+                            width: 33%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            padding-bottom: 10px;
+                            padding-left: 10px;
+                            p {
+                                font-size: 16px;
+                                font-weight: bold;
+                                font-family: 'Oswald', sans-serif;
+                                color: #B2C2D4;
+                                span {
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    font-family: 'Oswald', sans-serif;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                    .weapons-header-bottom {
+                        width: 100%;
+                        height: 50%;
+                        background-color: #000;
+                        display: flex;
+                        justify-content: space-between;
+                        .bottom-title {
+                            width: 33%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            font-family: 'Titillium Web', sans-serif;
+                            font-size: 18px;
+                            color: #fff;
+                        }
+                        .bottom-Deaths {
+                            width: 33%;
+                            height: 100%;
+                            padding-top: 10px;
+                            padding-left: 10px;
+                            p {
+                                font-size: 16px;
+                                font-weight: bold;
+                                font-family: 'Oswald', sans-serif;
+                                color: #B2C2D4;
+                                span {
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    font-family: 'Oswald', sans-serif;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        .bottom-Shots {
+                            width: 33%;
+                            height: 100%;
+                            padding-top: 10px;
+                            padding-left: 10px;
+                            p {
+                                font-size: 16px;
+                                font-weight: bold;
+                                font-family: 'Oswald', sans-serif;
+                                color: #B2C2D4;
+                                span {
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    font-family: 'Oswald', sans-serif;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                .weapons-body {
+                    width: 100%;
+                    height: 40%;
+                    background-color: #2D3640;
+                    table {
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        width: 100%;
+                        th {
+                            background-color: #475666;
+                            color: #B2C2D4;
+                            text-align: left;
+                            padding: 8px;
+                            border-top: 1px solid #000;
+                        }
+                        td {
+                            color: #DFE0E2;
+                        }
+                        tr {
+                            &:nth-child(even) {
+                                background-color: #2D3640;
+                            }
+                        }
+                    }
+                }
+                .weapons-footer {
+                    width: 100%;
+                    height: 20%;
+                    background-color: #3B4754;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    a {
+                        width: 80%;
+                        height: 50px;
+                        border-radius: 5px;
+                        background-color: #58626D;
+                        color: #DFE0E2;
+                        text-decoration: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .skills {
+                width: 49%;
+                height: 100%;
+                border-radius: 10px;
+                .skills-header {
+                    width: 100%;
+                    height: 40%;
+                    .skills-header-top {
+                        width: 100%;
+                        height: 50%;
+                        background-color: #000;
+                        display: flex;
+                        justify-content: space-between;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                        .top-title {
+                            width: 33%;
+                            height: 100%;
+                            p {
+                                padding-top: 10px;
+                                padding-left: 20px;
+                                font-family: 'Titillium Web', sans-serif;
+                                font-size: 18px;
+                                color: #fff;
+                            }
+                        }
+                        .top-Uses {
+                            width: 33%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            padding-bottom: 10px;
+                            padding-left: 10px;
+                            p {
+                                font-size: 16px;
+                                font-weight: bold;
+                                font-family: 'Oswald', sans-serif;
+                                color: #B2C2D4;
+                                span {
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    font-family: 'Oswald', sans-serif;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        .top-Awarded {
+                            width: 33%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            padding-bottom: 10px;
+                            padding-left: 10px;
+                            p {
+                                font-size: 16px;
+                                font-weight: bold;
+                                font-family: 'Oswald', sans-serif;
+                                color: #B2C2D4;
+                                span {
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    font-family: 'Oswald', sans-serif;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                    .skills-header-bottom {
+                        width: 100%;
+                        height: 50%;
+                        background-color: #000;
+                        display: flex;
+                        justify-content: space-between;
+                        .bottom-title {
+                            width: 33%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            font-family: 'Titillium Web', sans-serif;
+                            font-size: 18px;
+                            color: #fff;
+                        }
+                        .bottom-Assists {
+                            width: 33%;
+                            height: 100%;
+                            padding-top: 10px;
+                            padding-left: 10px;
+                            p {
+                                font-size: 16px;
+                                font-weight: bold;
+                                font-family: 'Oswald', sans-serif;
+                                color: #B2C2D4;
+                                span {
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    font-family: 'Oswald', sans-serif;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        .bottom-Shots {
+                            width: 33%;
+                            height: 100%;
+                            padding-top: 10px;
+                            padding-left: 10px;
+                            p {
+                                font-size: 16px;
+                                font-weight: bold;
+                                font-family: 'Oswald', sans-serif;
+                                color: #B2C2D4;
+                                span {
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    font-family: 'Oswald', sans-serif;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                .skills-body {
+                    width: 100%;
+                    height: 40%;
+                    background-color: #2D3640;
+                    table {
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        width: 100%;
+                        th {
+                            background-color: #475666;
+                            color: #B2C2D4;
+                            text-align: left;
+                            padding: 8px;
+                            border-top: 1px solid #000;
+                        }
+                        td {
+                            color: #DFE0E2;
+                        }
+                        tr {
+                            &:nth-child(even) {
+                                background-color: #2D3640;
+                            }
+                        }
+                    }
+                }
+                .skills-footer {
+                    width: 100%;
+                    height: 20%;
+                    background-color: #3B4754;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    a {
+                        width: 80%;
+                        height: 50px;
+                        border-radius: 5px;
+                        background-color: #58626D;
+                        color: #DFE0E2;
+                        text-decoration: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+td {
+    text-align: left;
+    text-align: left;
+    padding: 8px;
+    padding: 8px;
+    border-top: 1px solid #000;
+    border-top: 1px solid #000;
+}

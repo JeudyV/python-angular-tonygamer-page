@@ -1,0 +1,529 @@
+<header>
+    <div class="header-wrapper">
+        <div class="header-img">
+            <div class="icon-perfil"></div>
+            <div class="perfil-content">
+                <ul>
+                    <li>{{dplayer.conver2[0].platform}} <span>{{dplayer.conver2[0].name}}</span></li>
+                    <li>views</li>
+                    <li><span><i class="fas fa-star-half-alt"></i></span>{{dplayer.conver2[0].views}}</li>
+                </ul>
+                <div class="icon-twitch"><i class="fab fa-twitch"></i></div>
+            </div>
+        </div>
+
+    </div>
+    <nav class="nav-main">
+        <ul>
+            <li><a href="">Overview</a></li>
+            <li><a href="">Modes</a></li>
+            <li><a href="">Matches</a></li>
+            <li><a href="">Weapons</a></li>
+            <li><a href="">Killstreaks</a></li>
+            <li><a href="">Performance</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="content-wrapper">
+    <div class="sections-statistics">
+        <div class="content-section">
+            <div class="title-header">
+                <ul>
+                    <li>Warzone Overview</li>
+                    <li>46D 22H 05M Play Time</li>
+                    <li>2,685 Matches</li>
+                </ul>
+            </div>
+            <div class="title-level">
+                <div class="icon">
+                    <p>Icono</p>
+                </div>
+                <div class="lvl">
+                    <p>Level {{dplayer.WZ.lvl}} <span>(Top 28%)</span></p>
+                    <p>Level Progression: 83.4%</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">{{dplayer.WZ.win}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Top 5</span>
+                    <span class="score">{{dplayer.WZ.top_5}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">K/D Ratio</span>
+                    <span class="score">{{dplayer.WZ.top_10}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Damage/game</span>
+                    <span class="score">{{dplayer.WZ.top_25}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Top 10</span>
+                    <span class="score">{{dplayer.WZ.KD_Ratio}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Top 25</span>
+                    <span class="score">{{dplayer.WZ.Damage_game}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Kills</span>
+                    <span class="score">{{dplayer.WZ.kills}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Deaths</span>
+                    <span class="score">{{dplayer.WZ.Deaths}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Downs</span>
+                    <span class="score">{{dplayer.WZ.Downs}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Avg. life</span>
+                    <span class="score">{{dplayer.WZ.Avg_life}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Score</span>
+                    <span class="score">{{dplayer.WZ.score}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Score/min</span>
+                    <span class="score">{{dplayer.WZ.score_min}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Score/game</span>
+                    <span class="score">{{dplayer.WZ.score_game}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Cash</span>
+                    <span class="score">{{dplayer.WZ.cash}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Contracts</span>
+                    <span class="score">{{dplayer.WZ.contracts}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Win %</span>
+                    <span class="score">{{dplayer.WZ.win_por}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+            </div>
+        </div>
+        <div class="content-section">
+            <div class="title-header">
+                <ul>
+                    <li>Battle Royale</li>
+                    <li>46D 22H 05M Play Time</li>
+                    <li>2,685 Matches</li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">{{dplayer.BR.win}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Top 5</span>
+                    <span class="score">{{dplayer.BR.top_5}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">K/D Ratio</span>
+                    <span class="score">{{dplayer.BR.top_10}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Damage/game</span>
+                    <span class="score">{{dplayer.BR.top_25}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Top 10</span>
+                    <span class="score">{{dplayer.BR.KD_Ratio}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Top 25</span>
+                    <span class="score">{{dplayer.BR.Damage_game}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Kills</span>
+                    <span class="score">{{dplayer.BR.kills}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Deaths</span>
+                    <span class="score">{{dplayer.BR.Deaths}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Downs</span>
+                    <span class="score">{{dplayer.BR.Downs}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Avg. life</span>
+                    <span class="score">{{dplayer.BR.Avg_life}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Score</span>
+                    <span class="score">{{dplayer.BR.score}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Score/min</span>
+                    <span class="score">{{dplayer.BR.score_min}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Score/game</span>
+                    <span class="score">{{dplayer.BR.score_game}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Cash</span>
+                    <span class="score">{{dplayer.BR.cash}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Contracts</span>
+                    <span class="score">{{dplayer.BR.contracts}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+                <div class="stats">
+                    <span class="title">Win %</span>
+                    <span class="score">{{dplayer.BR.win_por}}</span>
+                    <!-- <span class="bottom">#51 • Top 0.1%</span> -->
+                </div>
+            </div>
+            <!-- <div class="content-days">
+                <div class="title">
+                    <p>Last 7 Days</p>
+                </div>
+                <div class="c-d">
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <!-- <div class="content-section">
+            <div class="title-header">
+                <ul>
+                    <li>Plunder</li>
+                    <li>46D 22H 05M Play Time</li>
+                    <li>2,685 Matches</li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">2,754</span>
+                    <span class="bottom">#51 • Top 0.1%</span>
+                </div>
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">2,754</span>
+                    <span class="bottom">#51 • Top 0.1%</span>
+                </div>
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">2,754</span>
+                    <span class="bottom">#51 • Top 0.1%</span>
+                </div>
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">2,754</span>
+                    <span class="bottom">#51 • Top 0.1%</span>
+                </div>
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">2,754</span>
+                    <span class="bottom">#51 • Top 0.1%</span>
+                </div>
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">2,754</span>
+                    <span class="bottom">#51 • Top 0.1%</span>
+                </div>
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">2,754</span>
+                    <span class="bottom">#51 • Top 0.1%</span>
+                </div>
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">2,754</span>
+                    <span class="bottom">#51 • Top 0.1%</span>
+                </div>
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">2,754</span>
+                    <span class="bottom">#51 • Top 0.1%</span>
+                </div>
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">2,754</span>
+                    <span class="bottom">#51 • Top 0.1%</span>
+                </div>
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">2,754</span>
+                    <span class="bottom">#51 • Top 0.1%</span>
+                </div>
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">2,754</span>
+                    <span class="bottom">#51 • Top 0.1%</span>
+                </div>
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">2,754</span>
+                    <span class="bottom">#51 • Top 0.1%</span>
+                </div>
+                <div class="stats">
+                    <span class="title">Wins</span>
+                    <span class="score">2,754</span>
+                    <span class="bottom">#51 • Top 0.1%</span>
+                </div>
+            </div>
+            <div class="content-days">
+                <div class="title">
+                    <p>Last 7 Days</p>
+                </div>
+                <div class="c-d">
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                    <div class="stats">
+                        <span class="t">Wins</span>
+                        <span class="s">2,754</span>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="content-ability">
+            <div class="weapons">
+                <div class="weapons-header">
+                    <div class="weapons-header-top">
+                        <div class="top-title">
+                            <p><span><i class="fas fa-medal"></i></span>Top Weapon</p>
+                        </div>
+                        <div class="top-kills">
+                            <p>Kills<br><span>6,123</span></p>
+                        </div>
+                        <div class="top-KD">
+                            <p>Kills<br><span>6,123</span></p>
+                        </div>
+                    </div>
+                    <div class="weapons-header-bottom">
+                        <div class="bottom-title">
+                            <p><span><i class="fas fa-medal"></i></span>super deadsilence</p>
+                        </div>
+                        <div class="bottom-Deaths">
+                            <p>Deaths<br><span>0</span></p>
+                        </div>
+                        <div class="bottom-Shots">
+                            <p>Head Shots<br><span>0</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div style="overflow-x:auto" class="weapons-body">
+                    <table>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Points</th>
+                            <th>Points</th>
+                            <th>Points</th>
+                        </tr>
+                        <tr>
+                            <td>Jill</td>
+                            <td>Smith</td>
+                            <td>50</td>
+                            <td>50</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Eve</td>
+                            <td>Jackson</td>
+                            <td>94</td>
+                            <td>94</td>
+                            <td>94</td>
+                        </tr>
+                        <tr>
+                            <td>Adam</td>
+                            <td>Johnson</td>
+                            <td>67</td>
+                            <td>67</td>
+                            <td>67</td>
+                        </tr>
+                        <tr>
+                            <td>Adam</td>
+                            <td>Johnson</td>
+                            <td>67</td>
+                            <td>67</td>
+                            <td>67</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="weapons-footer">
+                    <a href="#">View All weapons</a>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skills-header">
+                    <div class="skills-header-top">
+                        <div class="top-title">
+                            <p><span><i class="fas fa-medal"></i></span>Top Killstreaks</p>
+                        </div>
+                        <div class="top-Uses">
+                            <p>Kills<br><span>6,123</span></p>
+                        </div>
+                        <div class="top-Awarded">
+                            <p>Kills<br><span>6,123</span></p>
+                        </div>
+                    </div>
+                    <div class="skills-header-bottom">
+                        <div class="bottom-title">
+                            <p>UAV</p>
+                        </div>
+                        <div class="bottom-Assists">
+                            <p>Deaths<br><span>0</span></p>
+                        </div>
+                        <div class="bottom-Shots">
+                            <p>Head Shots<br><span>0</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div style="overflow-x:auto" class="skills-body">
+                    <table>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Points</th>
+                            <th>Points</th>
+                        </tr>
+                        <tr>
+                            <td>Jill</td>
+                            <td>Smith</td>
+                            <td>50</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Eve</td>
+                            <td>Jackson</td>
+                            <td>94</td>
+                            <td>94</td>
+                        </tr>
+                        <tr>
+                            <td>Adam</td>
+                            <td>Johnson</td>
+                            <td>67</td>
+                            <td>67</td>
+                        </tr>
+                        <tr>
+                            <td>Adam</td>
+                            <td>Johnson</td>
+                            <td>67</td>
+                            <td>67</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="skills-footer">
+                    <a href="#">View All Killstreaks</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
